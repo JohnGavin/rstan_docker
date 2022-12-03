@@ -3,8 +3,8 @@
 # # [Choice] Base image. Minimal (r-ver), tidyverse installed (tidyverse), or full image (binder): rocker/r-ver, rocker/tidyverse, rocker/binder
 #ARG BASE_IMAGE=rocker/tidyverse
 #FROM ${BASE_IMAGE}:${VARIANT}
-FROM eddelbuettel/r2u:jammy
-# docker pull rstan/rstan:latest ?
+# FROM eddelbuettel/r2u:jammy
+FROM rstan/rstan:latest ?
 RUN apt update -qq \
      && apt install --yes --no-install-recommends git
 
